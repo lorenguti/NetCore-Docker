@@ -25,12 +25,12 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHubConnection'
-    repository: 'lorenguti/netcore:v1.0'
+    repository: 'lorenguti/netcore'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHubConnection'
-    repository: 'lorenguti/netcore:v1.0'
+    repository: 'lorenguti/netcore'
     command: 'push'
     tags: 'lorenguti/netcore:$(Build.BuildId)'
