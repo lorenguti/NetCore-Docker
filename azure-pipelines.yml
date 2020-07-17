@@ -27,9 +27,9 @@ steps:
     containerRegistry: 'DockerHubConnection'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-
+    tags: 'lorenguti/netcore:$(Build.BuildId)'
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHubConnection'
     command: 'push'
-    tags: 'lorenguti/$(Build.BuildId)'
+    tags: 'lorenguti/netcore:$(Build.BuildId)'
