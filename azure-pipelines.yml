@@ -30,7 +30,6 @@ steps:
     Dockerfile: '**/Dockerfile'
 - task: Docker@2
   inputs:
-    containerRegistry: 'DockerHubConnection'
-    repository: 'lorenguti/netcore'
+    containerRegistry: 'DockerHubConnection'    
     command: 'push'
     tags: 'lorenguti/netcore:$(Build.BuildId)'
