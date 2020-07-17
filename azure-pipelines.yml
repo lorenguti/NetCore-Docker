@@ -32,4 +32,5 @@ steps:
   inputs:
     containerRegistry: 'DockerHubConnection'    
     command: 'push'
-    tags: 'lorenguti/netcore:$(Build.BuildId)'
+    repository: 'netcore'
+    tags: 'lorenguti/netcore:v$(Build.BuildId)'
