@@ -28,9 +28,4 @@ steps:
     repository: 'lorenguti/netcore'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'DockerHubConnection'    
-    command: 'push'
-    repository: 'netcore'
     tags: 'lorenguti/netcore:v$(Build.BuildId)'
