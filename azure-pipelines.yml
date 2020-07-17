@@ -29,3 +29,5 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'v$(Build.BuildId)'
+
+- task: PublishBuildArtifacts@1
