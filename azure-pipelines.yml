@@ -28,4 +28,4 @@ steps:
     repository: 'lorenguti/netcore'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'lorenguti/$(Build.Repository.Name):v$(Build.BuildId)'
+    tags: ':v$(Build.BuildId)'
