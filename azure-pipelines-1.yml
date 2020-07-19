@@ -27,3 +27,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerHubConnection'
+    repository: 'lorenguti/netcore'
+    command: 'push'
